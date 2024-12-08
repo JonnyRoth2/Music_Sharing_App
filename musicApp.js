@@ -65,7 +65,7 @@ app.post("/addProfile", async (req, res) => {
   tracks=await makeProfile(idstring);
   console.log(tracks);
   await insertConnectDB(user,idstring,key);
-  res.render("profile.ejs",{table: tracks});
+  res.render("profile.ejs",{user: `<h1>${user}'s Profile</h1>`, table: tracks});
 }else{
   res.render('addProfile.ejs', {error: 'Username Already Exists'})
 }
