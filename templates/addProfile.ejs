@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <link rel="stylesheet" type="text/css" href="/css/style.css">
+            <title>Add Profile</title>
+        </head>
+        <body>
+            <fieldset><br>
+            <h1>Add a Profile</h1>
+            <h2>Add your username, your top songs, and a deletion key to add your top songs profile</h2><br>
+            <div>
+                <%- error %>
+            </div>
+            <form method="post" action="/addProfile" class="addForm"><br><br>
+                <input type="text" class=form_text id="user" name="user" placeholder="Profile Username" required><br>
+                <input type="text" class=form_text id="song1" name="song1" placeholder="Song 1" required><br>
+                <input type="text" class=form_text id="song2" name="song2" placeholder="Song 2"><br>
+                <input type="text" class=form_text id="song3" name="song3" placeholder="Song 3"><br>
+                <input type="text" class=form_text id="key" name="key" placeholder="Key" required><br>
+                <input type="submit" class="submitButton" id="submitSong"><br><br>
+            </form><br>
+        </fieldset>
+            <a href="/">HOME</a>
+        </body>
+    </html>

@@ -1,2 +1,2 @@
-# Music_Sharing_App
-Lets users import their favorite music and makes them a profile with their music.
+# song-recommender
+Built for a class and is a Web App built on the mern stack that recommends songs to a user and can save those recomendations to an account.
