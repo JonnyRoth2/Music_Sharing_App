@@ -23,19 +23,6 @@ app.listen(portNumber);
 app.use(express.static(path.join(__dirname,'public')));
 console.log(`Web server is running at http://localhost:${portNumber}`);
 process.stdin.setEncoding("utf8");
-const prompt = "Stop to shutdown the server: "
-process.stdout.write(prompt);
-process.stdin.on("readable", function () {const dataInput = process.stdin.read();
-    const command = dataInput.trim();
-    if(command.toLowerCase() === "stop"){
-    	    process.stdout.write("Shutting down the server") 
-            process.exit(0); 
-    	      } 
-    	    else{ 
-          process.stdout.write(`Invalid command: ${command}\n`);
-    	    } 
-        }); 
-
 async function getToken() {
  const response = await fetch(`https://accounts.spotify.com/api/token`, {
   method: 'POST',
